@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "987339085155",
+    "project_id": "batuga-notes-app",
+    "storage_bucket": "batuga-notes-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987339085155:android:03b3f3ea0a283fa1cb6f56",
+        "android_client_info": {
+          "package_name": "com.batuga.notes_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987339085155-0h8sj0lct9ej0be4k0mio169a134k2k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC32qXm0UcSFMckmY0qWhEUEgGbLOntTKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987339085155-0h8sj0lct9ej0be4k0mio169a134k2k8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "987339085155-r0g5n8bu04et3pviv2vs0uvdq668fa1m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.batuga.notesApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
