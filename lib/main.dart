@@ -39,13 +39,18 @@ class HomePage extends StatelessWidget {
             if (user != null) {
               if (user.emailVerified) {
                 print("Email is verified");
+                return const Text("Done");
               } else {
-                return const VerifyEmailView();
+
+                print(user?.emailVerified);
+                print(user);
+                return const LoginView();
               }
-            } else {
+            } else { 
+             
               return const LoginView();
             }
-            return const Text("Done");
+            
           default:
             return const CircularProgressIndicator();
         }

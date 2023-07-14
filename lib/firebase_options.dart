@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,21 +43,40 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCNvWuOoJq4obWslZBKKbXtzGSh3DKRpPc',
+    appId: '1:614922055253:web:256b75f1b201ca0058eedc',
+    messagingSenderId: '614922055253',
+    projectId: 'fluttertuga-notes',
+    authDomain: 'fluttertuga-notes.firebaseapp.com',
+    storageBucket: 'fluttertuga-notes.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC32qXm0UcSFMckmY0qWhEUEgGbLOntTKM',
-    appId: '1:987339085155:android:03b3f3ea0a283fa1cb6f56',
-    messagingSenderId: '987339085155',
-    projectId: 'batuga-notes-app',
-    storageBucket: 'batuga-notes-app.appspot.com',
+    apiKey: 'AIzaSyChp-RC6YZdNXnF7Ub16ujh9AWEUzO-smM',
+    appId: '1:614922055253:android:9d94a311b4b996a758eedc',
+    messagingSenderId: '614922055253',
+    projectId: 'fluttertuga-notes',
+    storageBucket: 'fluttertuga-notes.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDwmK0yRt9OW44jGZdnSTIGr6HPc3HIC4E',
-    appId: '1:987339085155:ios:98c22f54a020ac9dcb6f56',
-    messagingSenderId: '987339085155',
-    projectId: 'batuga-notes-app',
-    storageBucket: 'batuga-notes-app.appspot.com',
-    iosClientId: '987339085155-r0g5n8bu04et3pviv2vs0uvdq668fa1m.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAJaegOlEyHz8wNWPEFvIL_57lOhH22lCY',
+    appId: '1:614922055253:ios:87db59521145c47558eedc',
+    messagingSenderId: '614922055253',
+    projectId: 'fluttertuga-notes',
+    storageBucket: 'fluttertuga-notes.appspot.com',
+    iosClientId: '614922055253-4duq7a88mu4eus2u96p475s9f5rnhoek.apps.googleusercontent.com',
     iosBundleId: 'com.batuga.notesApp',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAJaegOlEyHz8wNWPEFvIL_57lOhH22lCY',
+    appId: '1:614922055253:ios:62536420fbfa042258eedc',
+    messagingSenderId: '614922055253',
+    projectId: 'fluttertuga-notes',
+    storageBucket: 'fluttertuga-notes.appspot.com',
+    iosClientId: '614922055253-p94oeek3jha10vj1d28g55qs33bknhd9.apps.googleusercontent.com',
+    iosBundleId: 'com.batuga.notesApp.RunnerTests',
   );
 }
